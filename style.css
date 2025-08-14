@@ -1,0 +1,75 @@
+/* Header */
+#voice-search-button {
+  display: none;
+}
+
+#masthead-container #container #end > * {
+  display: none;
+}
+
+#masthead-container #container #start #guide-button {
+  display: none;
+}
+
+/* Side */
+#page-manager {
+  margin-left: 0 !important;
+}
+
+ytd-mini-guide-renderer {
+  display: none;
+}
+
+[data-page-type="home"] {
+  #content > :not(#masthead-container) {
+    display: none;
+  }
+
+  #masthead-container {
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    transition: none !important;
+    width: 600px !important;
+    max-width: 95% !important;
+  }
+
+  #masthead-container #container {
+    flex-direction: column !important;
+    gap: 16px !important;
+  }
+
+  #masthead-container #container #center {
+    width: 100%;
+  }
+
+  ytd-topbar-logo-renderer {
+    scale: 1.5 !important;
+  }
+
+  #masthead-container yt-searchbox,
+  .ytSearchboxComponentInputBox {
+    display: flex !important;
+    margin: 0 !important;
+  }
+}
+
+[data-page-type="search"] {
+  #chip-bar {
+    display: none !important;
+  }
+
+  #about-these-results {
+    display: none !important;
+  }
+
+  ytd-search-header-renderer {
+    justify-content: end !important;
+  }
+}
+
+[data-page-type="watch"] {
+  #secondary {
+    display: none !important;
+  }
+}
