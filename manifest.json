@@ -1,13 +1,16 @@
 {
-  "manifest_version": 2,
-  "name": "LessTube - Minimalist YouTube",
+  "manifest_version": 3,
+  "name": "LessTube",
   "version": "1.0.0",
   "description": "Removes YouTube's addictive features and helps you focus only on the videos you actually want to watch.",
   "author": "Less Matter",
   "homepage_url": "https://github.com/lessmatter/lesstube",
   
   "permissions": [
-    "activeTab",
+    "activeTab"
+  ],
+  
+  "host_permissions": [
     "*://www.youtube.com/*"
   ],
   
@@ -26,10 +29,10 @@
     "96": "icon-96.png"
   },
   
-  "applications": {
+  "browser_specific_settings": {
     "gecko": {
-      "id": "lesstube@yourdomain.com",
-      "strict_min_version": "57.0"
+      "id": "lesstube@lessmatter.com",
+      "strict_min_version": "109.0"
     }
   }
 }
