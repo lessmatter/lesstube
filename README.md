@@ -16,7 +16,7 @@ A browser extension that removes YouTube's addictive features and helps you focu
 ### Firefox Developer Edition (Recommended)
 1. Download and install [Firefox Developer Edition](https://www.mozilla.org/firefox/developer/)
 2. Go to `about:config` and set `xpinstall.signatures.required` to `false`
-3. Download the latest `lesstube-v1.0.0-final.zip` from this repository
+3. Download the `lesstube.zip` from this repository
 4. Go to `about:addons`
 5. Click the gear icon and select "Install Add-on From File"
 6. Select the downloaded `.zip` file
