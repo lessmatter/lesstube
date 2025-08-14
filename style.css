@@ -70,7 +70,7 @@ ytd-mini-guide-renderer,
 }
 
 [data-page-type="watch"] {
-  #secondary {
+  #secondary-inner {
     display: none !important;
   }
 }
