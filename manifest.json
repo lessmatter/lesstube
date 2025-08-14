@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "LessTube",
   "version": "1.0.0",
-  "description": "Removes YouTube's addictive features and helps you focus only on the videos you actually want to watch.",
+  "description": "Minimalist YouTube - removes distractions and addictive features.",
   "author": "Less Matter",
   "homepage_url": "https://github.com/lessmatter/lesstube",
   

@@ -74,3 +74,11 @@ ytd-mini-guide-renderer,
     display: none !important;
   }
 }
+
+[data-page-type="channel"] {
+  [tab-title="Home"],
+  [tab-title="Shorts"] {
+    opacity: 0 !important;
+    pointer-events: none !important;
+  }
+}

@@ -25,8 +25,29 @@ function getPageType() {
     }
 }
 
+// Ohjaa kanavan etusivulta videos-sivulle
+function redirectChannelToVideos() {
+    const path = window.location.pathname;
+    
+    // Tarkista onko kanavan etusivulla (/@channelName ilman /videos, /playlists, /about jne.)
+    if (path.match(/^\/@[^\/]+$/) || 
+        path.match(/^\/channel\/[^\/]+$/) || 
+        path.match(/^\/c\/[^\/]+$/)) {
+        
+        console.log('Ohjataan kanavan etusivulta videos-sivulle');
+        const videosUrl = window.location.href + '/videos';
+        window.location.replace(videosUrl);
+    }
+    return false;
+}
+
 // Aseta page-type attribuutti body-elementtiin
 function setPageType() {
+    // Yritä ensin ohjata jos ollaan kanavan etusivulla
+    if (redirectChannelToVideos()) {
+        return; // Jos ohjattiin, ei tehdä muuta
+    }
+    
     const pageType = getPageType();
     document.body.setAttribute('data-page-type', pageType);
     console.log(`Sivu tyyppi asetettu: ${pageType} (${window.location.pathname})`);
