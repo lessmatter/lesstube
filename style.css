@@ -16,7 +16,8 @@
   margin-left: 0 !important;
 }
 
-ytd-mini-guide-renderer {
+ytd-mini-guide-renderer,
+#guide-inner-content {
   display: none;
 }
 
@@ -26,7 +27,7 @@ ytd-mini-guide-renderer {
   }
 
   #masthead-container {
-    top: 50% !important;
+    top: 40% !important;
     left: 50% !important;
     transform: translate(-50%, -50%) !important;
     transition: none !important;
