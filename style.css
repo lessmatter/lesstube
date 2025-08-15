@@ -11,6 +11,10 @@
   display: none;
 }
 
+#dismissible {
+  display: none;
+}
+
 /* Side */
 #page-manager {
   margin-left: 0 !important;
