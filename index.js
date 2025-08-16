@@ -89,21 +89,19 @@ new MutationObserver(() => {
 
 // Add footer to home page
 function addHomePageFooter() {
+  document.getElementById("lesstube-footer")?.remove();
   const pageType = getPageType();
 
-  if (pageType === "home" && !document.getElementById("lesstube-footer")) {
+  if (pageType === "home") {
     const footer = document.createElement("div");
     footer.id = "lesstube-footer";
     footer.innerHTML = `
         <p style="text-align: center; color: #606060; font-size: 14px; font-family: 'YouTube Sans', 'Roboto', sans-serif;">
-            This page has been modified by <strong>LessTube</strong> extension.<br>
-            Made by <a href="https://bsky.app/profile/lessmatter.com" target="_blank" style="color: #065fd4;">Less Matter</a>.
+            This page has been modified by <a href="https://github.com/lessmatter/lesstube" target="_blank" style="color:rgb(158, 133, 228);">LessTube</a> extension from <a href="https://bsky.app/profile/lessmatter.com" target="_blank" style="color: rgb(158, 133, 228);">Less Matter</a>.
         </p>
     `;
 
     // Add footer after masthead container
     document.getElementById("container")?.appendChild(footer);
-  } else {
-    document.getElementById("lesstube-footer")?.remove();
   }
 }

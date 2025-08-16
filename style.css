@@ -3,10 +3,6 @@
   display: none;
 }
 
-#masthead-container #container #end > * {
-  display: none;
-}
-
 #masthead-container #container #start #guide-button {
   display: none;
 }
@@ -27,6 +23,10 @@ ytd-mini-guide-renderer,
 
 [data-page-type="home"] {
   #content > :not(#masthead-container) {
+    display: none;
+  }
+
+  #masthead-container #container #end > * {
     display: none;
   }
 
