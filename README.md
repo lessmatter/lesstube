@@ -11,21 +11,29 @@ A browser extension that transforms YouTube into a search-only platform - no rec
 
 ## Installation
 
-**Note:** This extension is not yet published on Mozilla Add-ons, so it only works with Firefox Developer Edition.
+### 🦊 Firefox (Recommended)
+Install directly from Mozilla Add-ons:
 
-### Firefox Developer Edition (Recommended)
-1. Download and install [Firefox Developer Edition](https://www.mozilla.org/firefox/developer/)
-2. Go to `about:config` and set `xpinstall.signatures.required` to `false`
-3. Download the `lesstube.zip` from this repository
-4. Go to `about:addons`
-5. Click the gear icon and select "Install Add-on From File"
-6. Select the downloaded `.zip` file
-7. ✅ **Extension stays installed permanently**
+**[📦 Install from Firefox Add-ons](https://addons.mozilla.org/firefox/addon/lesstube/)**
 
-### Why Firefox Developer Edition?
-- Regular Firefox requires Mozilla's signature for permanent installation
-- Chrome/Edge work in developer mode but show constant warnings
-- Firefox Developer Edition allows unsigned extensions without warnings
+1. Click the link above or search "LessTube" in Firefox Add-ons
+2. Click "Add to Firefox"
+3. ✅ **Automatic updates and secure installation**
+
+### 🌐 Chrome/Edge/Chromium Browsers
+For Chrome-based browsers, install manually from GitHub:
+
+1. **Download:** Get the latest `lesstube-v*.zip` from [Releases](https://github.com/lessmatter/lesstube/releases)
+2. **Extract:** Unzip the downloaded file
+3. **Install:**
+   - Open `chrome://extensions/` (Chrome) or `edge://extensions/` (Edge)
+   - Enable "Developer mode" (toggle in top right)
+   - Click "Load unpacked"
+   - Select the extracted folder
+4. ⚠️ **Note:** Shows developer mode warning, but works permanently
+
+### 🍎 Safari
+Safari is not supported due to platform limitations.
 
 ## What LessTube Does
 
@@ -71,11 +79,17 @@ Contributions are welcome! Please feel free to submit issues or pull requests.
 
 This project is licensed under the terms specified in the LICENSE file.
 
+## Links
+
+- 🦊 **[Firefox Add-on](https://addons.mozilla.org/firefox/addon/lesstube/)**
+- 📂 **[GitHub Repository](https://github.com/lessmatter/lesstube)**
+- 🐦 **[Less Matter on Bluesky](https://bsky.app/profile/lessmatter.com)**
+
 ## Author
 
 **Less Matter**  
-Homepage: https://github.com/lessmatter/lesstube
+Homepage: https://github.com/lessmatter/
 
 ---
 
-*Take back control of your YouTube experience. Watch what you want, when you want.*
+*Take back control of your YouTube experience. Search intentionally, watch purposefully.*

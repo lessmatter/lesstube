@@ -1,10 +1,24 @@
 {
   "manifest_version": 3,
   "name": "LessTube",
-  "version": "1.0.0",
-  "description": "Minimalist YouTube - removes distractions and addictive features.",
+  "description": "YouTube as a search engine - no recommendations, just search",
+  "version": "1.0.1",
   "author": "Less Matter",
   "homepage_url": "https://github.com/lessmatter/lesstube",
+  
+  "icons": {
+    "16": "icon-16x16.png",
+    "48": "icon-48x48.png",
+    "128": "icon-128x128.png"
+  },
+  
+  "action": {
+    "default_icon": {
+      "16": "icon-16x16.png",
+      "48": "icon-48x48.png",
+      "128": "icon-128x128.png"
+    }
+  },
   
   "permissions": [
     "activeTab"
@@ -22,12 +36,6 @@
       "run_at": "document_end"
     }
   ],
-  
-  "icons": {
-    "16": "icon-16.png",
-    "48": "icon-48.png",
-    "96": "icon-96.png"
-  },
   
   "browser_specific_settings": {
     "gecko": {
