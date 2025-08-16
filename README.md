@@ -1,12 +1,12 @@
-# LessTube - Minimalist YouTube
+# LessTube - YouTube as a Search Engine
 
-A browser extension that removes YouTube's addictive features and helps you focus only on the videos you actually want to watch.
+A browser extension that transforms YouTube into a search-only platform - no recommendations, no algorithm suggestions, just the videos you actively search for.
 
 ## Features
 
-- 🎯 **Focused viewing** - Remove distracting elements that keep you scrolling endlessly
-- 🚫 **No algorithm manipulation** - Take control of what you watch instead of letting YouTube decide
-- 🧘 **Minimalist interface** - Clean, distraction-free YouTube experience
+- 🔍 **Search-only experience** - YouTube works like Google: you search, you find, you watch
+- 🚫 **No algorithm manipulation** - YouTube can't decide what you should watch next
+- 🎯 **Intentional viewing** - Only see videos you deliberately search for
 - ⚡ **Lightweight** - Simple extension that doesn't slow down your browsing
 
 ## Installation
