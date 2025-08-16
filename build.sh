@@ -57,9 +57,17 @@ if [ -f "${OUTPUT_FILE}" ]; then
     echo ""
     echo "🎉 Version bumped from ${CURRENT_VERSION} to ${NEW_VERSION}"
     echo "🚀 Ready for Mozilla Add-ons submission!"
+    echo ""
+    echo "📋 Next steps for GitHub Release:"
+    echo "1. Go to: https://github.com/lessmatter/lesstube/releases"
+    echo "2. Click 'Create a new release'"
+    echo "3. Upload: ${OUTPUT_FILE}"
+    echo "4. Tag: v${NEW_VERSION}"
+    echo "5. Set as latest release for Chrome/Edge users"
 else
     echo "❌ Build failed!"
     echo "↩️ Reverting version change..."
     sed -i '' "s/\"version\": \"${NEW_VERSION}\"/\"version\": \"${CURRENT_VERSION}\"/" manifest.json
     exit 1
 fi
+

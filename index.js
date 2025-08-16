@@ -97,7 +97,7 @@ function addHomePageFooter() {
     footer.id = "lesstube-footer";
     footer.innerHTML = `
         <p style="text-align: center; color: #606060; font-size: 14px; font-family: 'YouTube Sans', 'Roboto', sans-serif;">
-            This page has been modified by <a href="https://github.com/lessmatter/lesstube" target="_blank" style="color:rgb(158, 133, 228);">LessTube</a> extension from <a href="https://bsky.app/profile/lessmatter.com" target="_blank" style="color: rgb(158, 133, 228);">Less Matter</a>.
+            <a href="https://github.com/lessmatter/lesstube" target="_blank" style="color: inherit;">LessTube</a> by <a href="https://bsky.app/profile/lessmatter.com" target="_blank" style="color: inherit;">Less Matter</a>
         </p>
     `;
 
