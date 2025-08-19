@@ -25,10 +25,6 @@ echo "✅ Updated manifest.json version"
 # Define output filename with new version
 OUTPUT_FILE="lesstube-v${NEW_VERSION}.zip"
 
-# Remove old zip files (optional)
-echo "🧹 Cleaning old zip files..."
-rm -f lesstube-*.zip
-
 # Create zip with only required files
 echo "📦 Creating zip file: ${OUTPUT_FILE}"
 zip -r "${OUTPUT_FILE}" \

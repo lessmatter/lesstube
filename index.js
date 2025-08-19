@@ -1,8 +1,5 @@
-// LessTube - YouTube as a Search Engine
-// Made by Less Matter - lessmatter.com
 console.log("LessTube loaded! Made by Less Matter (lessmatter.com)");
 
-// Check if on home page
 function isHomePage() {
   return (
     window.location.pathname === "/" ||
@@ -11,7 +8,6 @@ function isHomePage() {
   );
 }
 
-// Identify page type
 function getPageType() {
   const path = window.location.pathname;
 
@@ -38,11 +34,9 @@ function getPageType() {
   }
 }
 
-// Redirect from channel home to videos page
 function redirectChannelToVideos() {
   const path = window.location.pathname;
 
-  // Check if on channel home page (/@channelName without /videos, /playlists, /about etc.)
   if (
     path.match(/^\/@[^\/]+$/) ||
     path.match(/^\/channel\/[^\/]+$/) ||
@@ -51,43 +45,57 @@ function redirectChannelToVideos() {
     console.log("Redirecting from channel home to videos page");
     const videosUrl = window.location.href + "/videos";
     window.location.replace(videosUrl);
+    return true;
   }
   return false;
 }
 
-// Set page-type attribute to body element
-function setPageType() {
-  // Try to redirect if on channel home page
-  if (redirectChannelToVideos()) {
-    return; // If redirected, don't do anything else
-  }
+function redirectShortsToWatch() {
+  const path = window.location.pathname;
 
+  if (path.match(/^\/shorts\/[^\/]+$/)) {
+    console.log("Redirecting from Shorts to regular watch page");
+    const videoId = path.split("/")[2];
+    const watchUrl = `https://www.youtube.com/watch?v=${videoId}`;
+    window.location.replace(watchUrl);
+    return true;
+  }
+  return false;
+}
+
+function handleRedirects() {
+  if (redirectChannelToVideos()) return true;
+  if (redirectShortsToWatch()) return true;
+  return false;
+}
+
+function setPageType() {
   const pageType = getPageType();
   document.body.setAttribute("data-page-type", pageType);
   console.log(`Page type set: ${pageType} (${window.location.pathname})`);
+}
 
-  // Add footer to home page
+function initializePage() {
+  if (handleRedirects()) return;
+  setPageType();
   setTimeout(addHomePageFooter, 100);
 }
 
-// Initialize when page is loaded
 if (document.readyState === "loading") {
-  document.addEventListener("DOMContentLoaded", setPageType);
+  document.addEventListener("DOMContentLoaded", initializePage);
 } else {
-  setPageType();
+  initializePage();
 }
 
-// Watch for URL changes (YouTube SPA)
 let lastUrl = location.href;
 new MutationObserver(() => {
   const url = location.href;
   if (url !== lastUrl) {
     lastUrl = url;
-    setTimeout(setPageType, 500);
+    setTimeout(initializePage, 500);
   }
 }).observe(document, { subtree: true, childList: true });
 
-// Add footer to home page
 function addHomePageFooter() {
   document.getElementById("lesstube-footer")?.remove();
   const pageType = getPageType();
@@ -102,7 +110,6 @@ function addHomePageFooter() {
         </p>
     `;
 
-    // Add footer after masthead container
     document.getElementById("container")?.appendChild(footer);
   }
 }

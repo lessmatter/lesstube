@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "LessTube",
   "description": "YouTube as a search engine - no recommendations, just search",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "author": "Less Matter",
   "homepage_url": "https://github.com/lessmatter/lesstube",
   

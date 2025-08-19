@@ -21,6 +21,11 @@ ytd-mini-guide-renderer,
   display: none;
 }
 
+/* Shorts */
+grid-shelf-view-model {
+  display: none !important;
+}
+
 [data-page-type="home"] {
   #content > :not(#masthead-container) {
     display: none;
